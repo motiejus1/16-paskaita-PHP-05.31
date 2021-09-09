@@ -47,28 +47,7 @@ document.querySelector("#createCompany").addEventListener("click", function() {
 
 // querySelector pasiims tik pati pirma is visu delete Mygtuku
 
-var mygtukai = document.querySelectorAll('.deleteCompany'); //mygtuku(objektas) masyva
-
-//addEventListener
-for(mygtukai of mygtukas) {
-    mygtukas.addEventListener("click", function() {
-        console.log(this.getAttribute("data-company-id"));
-        var id = this.getAttribute("data-company-id")
-        var xhttp = new XMLHttpRequest(); //objektas
-
-        xhttp.onreadystatechange = function() {
-            if(this.readyState == 4 && this.status == 200) {
-                document.querySelector("#alert-space").innerHTML = this.responseText; // 
-            }
-        };
-        
-        xhttp.open("GET", "deleteCompany.php?id=" + id, true);
-        xhttp.send();
-    });
-}
-
-
-
+var mygtukai = document.querySelectorAll('.deleteButton')
 
 // document.querySelector(".deleteButton").addEventListener("click", function() {
 

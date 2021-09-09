@@ -62,7 +62,7 @@ for(mygtukai of mygtukas) {
             }
         };
         
-        xhttp.open("GET", "deleteCompany.php?id=" + id, true);
+        xhttp.open("GET", "addCompany.php?pavadinimas=" + pavadinimas + "&aprasymas=" + aprasymas + "&tipas_id=" + tipas_id, true);
         xhttp.send();
     });
 }

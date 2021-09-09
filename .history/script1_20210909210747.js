@@ -53,17 +53,8 @@ var mygtukai = document.querySelectorAll('.deleteCompany'); //mygtuku(objektas) 
 for(mygtukai of mygtukas) {
     mygtukas.addEventListener("click", function() {
         console.log(this.getAttribute("data-company-id"));
-        var id = this.getAttribute("data-company-id")
-        var xhttp = new XMLHttpRequest(); //objektas
+        ID = this.getAttribute("data-company-id")
 
-        xhttp.onreadystatechange = function() {
-            if(this.readyState == 4 && this.status == 200) {
-                document.querySelector("#alert-space").innerHTML = this.responseText; // 
-            }
-        };
-        
-        xhttp.open("GET", "deleteCompany.php?id=" + id, true);
-        xhttp.send();
     });
 }
 

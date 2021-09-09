@@ -50,20 +50,9 @@ document.querySelector("#createCompany").addEventListener("click", function() {
 var mygtukai = document.querySelectorAll('.deleteCompany'); //mygtuku(objektas) masyva
 
 //addEventListener
-for(mygtukai of mygtukas) {
+for(var mygtukai of mygtukas) {
     mygtukas.addEventListener("click", function() {
-        console.log(this.getAttribute("data-company-id"));
-        var id = this.getAttribute("data-company-id")
-        var xhttp = new XMLHttpRequest(); //objektas
 
-        xhttp.onreadystatechange = function() {
-            if(this.readyState == 4 && this.status == 200) {
-                document.querySelector("#alert-space").innerHTML = this.responseText; // 
-            }
-        };
-        
-        xhttp.open("GET", "deleteCompany.php?id=" + id, true);
-        xhttp.send();
     });
 }
 

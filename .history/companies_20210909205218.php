@@ -54,7 +54,7 @@
                         echo "<td>".$companies["imones_tipas_pavadinimas"]."</td>";
                         echo "<td>".$companies["imones_tipas_aprasymas"]."</td>";
                         echo "<td>";
-                            echo    "<button class='deleteCompany' data-company-id='".$companies["ID"]."' >Delete</button>";
+                            "<button><"
                         echo "</td>";
 
                     echo "</tr>";
