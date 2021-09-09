@@ -2,7 +2,7 @@
 
 //Kompanijoms
 
-function showCompanies() {
+function showClients() {
     var xhttp = new XMLHttpRequest(); //objektas
 
     xhttp.onreadystatechange = function() {
@@ -11,9 +11,11 @@ function showCompanies() {
         }
     };
 
-    xhttp.open("POST", "actionCompanies.php", true);
+    xhttp.open("POST", "action.php", true);
     xhttp.send();
 }
+
+showClients();
 
 
 document.querySelector("#company_create").addEventListener("click", function() {
@@ -39,7 +41,5 @@ document.querySelector("#createCompany").addEventListener("click", function() {
     };
     
     xhttp.open("GET", "addCompany.php?pavadinimas=" + pavadinimas + "&aprasymas=" + aprasymas + "&tipas_id=" + tipas_id, true);
-    xhttp.send();
-    
-    showCompanies();
+    xhttp.send();    
 });

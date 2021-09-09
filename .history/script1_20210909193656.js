@@ -11,7 +11,7 @@ function showCompanies() {
         }
     };
 
-    xhttp.open("POST", "actionCompanies.php", true);
+    xhttp.open("POST", "action.php", true);
     xhttp.send();
 }
 

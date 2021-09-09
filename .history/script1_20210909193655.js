@@ -11,7 +11,7 @@ function showCompanies() {
         }
     };
 
-    xhttp.open("POST", "actionCompanies.php", true);
+    xhttp.open("POST", "action.php", true);
     xhttp.send();
 }
 
@@ -41,5 +41,5 @@ document.querySelector("#createCompany").addEventListener("click", function() {
     xhttp.open("GET", "addCompany.php?pavadinimas=" + pavadinimas + "&aprasymas=" + aprasymas + "&tipas_id=" + tipas_id, true);
     xhttp.send();
     
-    showCompanies();
+    showCompanies()
 });
