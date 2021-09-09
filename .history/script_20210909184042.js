@@ -5,8 +5,6 @@
 //i console log
 
 
-// Klientus
-
 // document.querySelector("#show").addEventListener("click", function() {
     // console.log("Mygtukas paspaustas");
 function showClients() {
@@ -65,14 +63,4 @@ document.querySelector("#createClient").addEventListener("click", function() {
     // document.querySelector("#output").innerHTML = vardas + " " + pavarde + " " + teises_id;
 });    
 
-//Kompanijas
-
-document.querySelector("#company_create").addEventListener("click", function() {
-    //pasirinkti elementa kuri norime slepti/parodyti
-    //uzteti funkcija togle, kur mums uzdeda/prideda "d-none" klase
-    
-    var companyForm = document.querySelector(".companyForm");
-    companyForm.classList.toggle("d-none");
-
-
-});
+//

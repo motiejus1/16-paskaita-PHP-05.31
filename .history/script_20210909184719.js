@@ -72,7 +72,7 @@ document.querySelector("#company_create").addEventListener("click", function() {
     //uzteti funkcija togle, kur mums uzdeda/prideda "d-none" klase
     
     var companyForm = document.querySelector(".companyForm");
-    companyForm.classList.toggle("d-none");
+    companyForm.classList.toggle()
 
 
 });
