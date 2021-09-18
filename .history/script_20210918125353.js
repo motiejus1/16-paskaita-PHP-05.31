@@ -33,7 +33,7 @@ function createClient(vardas, pavarde, teises_id) {
         }
     };
     //???????
-    xhttp.open("GET", "addClient.php?vardas=" + vardas + "&pavarde=" + pavarde + "&teises_id=" + teises_id, false);
+    xhttp.open("GET", "addClient.php?vardas=" + vardas + "&pavarde=" + pavarde + "&teises_id=" + teises_id, true);
 
     xhttp.send();
 

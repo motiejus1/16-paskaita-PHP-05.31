@@ -18,9 +18,8 @@ function showClients() {
         }
     };
 
-    xhttp.open("POST", "action.php", false);
+    xhttp.open("POST", "action.php", true);
     xhttp.send();
-    
 }
 
 
@@ -33,11 +32,9 @@ function createClient(vardas, pavarde, teises_id) {
         }
     };
     //???????
-    xhttp.open("GET", "addClient.php?vardas=" + vardas + "&pavarde=" + pavarde + "&teises_id=" + teises_id, false);
+    xhttp.open("GET", "addClient.php?vardas=" + vardas + "&pavarde=" + pavarde + "&teises_id=" + teises_id, true);
 
-    xhttp.send();
-
-    showClients();
+    xhttp.send();    
 }
 
 // showClients();

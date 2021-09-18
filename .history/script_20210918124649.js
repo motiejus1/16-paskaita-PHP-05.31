@@ -18,26 +18,13 @@ function showClients() {
         }
     };
 
-    xhttp.open("POST", "action.php", false);
+    xhttp.open("POST", "action.php", true);
     xhttp.send();
-    
 }
 
 
-function createClient(vardas, pavarde, teises_id) {
-    var xhttp = new XMLHttpRequest(); //objektas
+function createClient() {
 
-    xhttp.onreadystatechange = function() {
-        if(this.readyState == 4 && this.status == 200) {
-            document.querySelector("#alert-space").innerHTML = this.responseText; // 
-        }
-    };
-    //???????
-    xhttp.open("GET", "addClient.php?vardas=" + vardas + "&pavarde=" + pavarde + "&teises_id=" + teises_id, false);
-
-    xhttp.send();
-
-    showClients();
 }
 
 // showClients();
@@ -64,9 +51,10 @@ document.querySelector("#createClient").addEventListener("click", function() {
     
     //ajax uzklausa
     
-    createClient(vardas,pavarde,teises_id);
-    //paims ir atliks atvaizdavimo uzklausa?
 
+    //paims ir atliks atvaizdavimo uzklausa?
+    
+    showClients();
 
     
     // document.querySelector("#output").innerHTML = vardas + " " + pavarde + " " + teises_id;
@@ -74,12 +62,12 @@ document.querySelector("#createClient").addEventListener("click", function() {
 
 //Kompanijas
 
-// document.querySelector("#company_create").addEventListener("click", function() {
-//     //pasirinkti elementa kuri norime slepti/parodyti
-//     //uzteti funkcija togle, kur mums uzdeda/prideda "d-none" klase
+document.querySelector("#company_create").addEventListener("click", function() {
+    //pasirinkti elementa kuri norime slepti/parodyti
+    //uzteti funkcija togle, kur mums uzdeda/prideda "d-none" klase
     
-//     var companyForm = document.querySelector(".companyForm");
-//     companyForm.classList.toggle("d-none");
+    var companyForm = document.querySelector(".companyForm");
+    companyForm.classList.toggle("d-none");
 
 
-// });
+});
